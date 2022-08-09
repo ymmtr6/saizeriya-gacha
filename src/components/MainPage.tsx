@@ -10,8 +10,6 @@ interface MainProps extends NavigationProps {
 
 const MainPage: React.FC<MainProps> = (props) => {
 
-  console.log(props);
-
   const pushDetailPage = () => {
     props.navigator.pushPage({
       component: DetailPage,

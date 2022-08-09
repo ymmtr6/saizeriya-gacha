@@ -28,7 +28,7 @@ ons-navigator > div {
     margin: auto;
     z-index: 5;
     width: 450px;
-    height: 787px;
+    height: 765px;
   }
   .frame-img {
     position: relative;
@@ -38,7 +38,7 @@ ons-navigator > div {
   /* コンテンツをスマホのフレーム内に収まるように上下中央に表示 */
   .main {
     width: 376px;
-    height: 603px;
+    height: 620px;
     position: absolute;
     top: 0;
     left: 0;
