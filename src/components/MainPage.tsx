@@ -1,16 +1,22 @@
 import React from "react";
 import { Page, Button, Toolbar } from "react-onsenui";
 import DetailPage from "./DetailPage";
+import { NavigationProps } from './Block';
 import ons from "onsenui";
 
-const MainPage: React.FC = (props: any) => {
+interface MainProps extends NavigationProps {
+  hoge?: string;
+}
+
+const MainPage: React.FC<MainProps> = (props) => {
+
+  console.log(props);
 
   const pushDetailPage = () => {
-    console.log(navigator);
     props.navigator.pushPage({
       component: DetailPage,
       title: "DetailPage",
-      shouldAnimateToolbar: false
+      props: { ...props }
     });
   };
 

@@ -3,6 +3,9 @@ import { Page, Button, Toolbar, BackButton } from "react-onsenui";
 import ons from 'onsenui';
 
 const DetailPage: React.FC = (props: any) => {
+
+  console.log(props);
+
   return (
     <Page key="page2">
       <Toolbar>

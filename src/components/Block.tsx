@@ -5,6 +5,10 @@ import ons from 'onsenui';
 import MainPage from './MainPage';
 import { NavigatorInfo } from '../utils/NavigatorInfo';
 
+export interface NavigationProps {
+  navigator?: any;
+}
+
 const renderPage = (route: any, navigator: any) => {
   const props = route.props || {};
   props.navigator = navigator;
@@ -19,7 +23,8 @@ const Block: React.FC = (props) => {
     initialRoute={
       {
         component: MainPage,
-        title: 'MainPage'
+        title: 'MainPage',
+        props: { ...props }
       } as NavigatorInfo
     }
     animationOptions={{
