@@ -22,7 +22,10 @@ const Block: React.FC = (props) => {
         title: 'MainPage'
       } as NavigatorInfo
     }
-    swipeable
+    animationOptions={{
+      delay: 0.1,
+      duration: 0.4
+    }}
   />)
 }
 

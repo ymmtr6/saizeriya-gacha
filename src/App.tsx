@@ -8,7 +8,10 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
+      <div className='frame'>
+        <img className='frame-img'></img>
+      </div>
+      <header className="App-header main">
         <Block />
       </header>
     </div>
