@@ -5,7 +5,7 @@ import ons from 'onsenui';
 import MainPage from './MainPage';
 import { NavigatorInfo } from '../utils/NavigatorInfo';
 
-export interface NavigationProps {
+export interface NavigatorProps {
   navigator?: any;
 }
 

@@ -1,7 +1,3 @@
-.App {
-  text-align: center;
-}
-
 .App-header {
   /* min-heightをいじると黒い死角が範囲外になる */
   /* display: flex;
@@ -12,8 +8,9 @@
   color: white;
 }
 
-ons-navigator > div {
-  background-color: transparent;
+/* onsen.cssを読み込むとtoolbarに position:absoruteが設定される対策 */
+.Under-toolbar {
+  margin-top: 50px;
 }
 
 /* PC版対応 */

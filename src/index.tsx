@@ -4,10 +4,10 @@ import './index.css';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
+import 'onsenui/css/onsenui.css';
+import "onsenui/css/onsen-css-components.css"
 import "onsenui";
 import "react-onsenui";
-import "onsenui/css/onsen-css-components.css"
-
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

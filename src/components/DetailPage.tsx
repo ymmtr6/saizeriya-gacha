@@ -12,7 +12,9 @@ const DetailPage: React.FC = (props: any) => {
           <BackButton>Back</BackButton>
         </div>
       </Toolbar>
-      DetailPage
+      <div className="Under-toolbar">
+        DetailPage
+      </div>
     </Page>
   );
 };

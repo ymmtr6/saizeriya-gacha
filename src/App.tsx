@@ -9,7 +9,6 @@ function App() {
     <div className="App">
       <div className='frame'>
         <div className='frame-img'></div>
-
       </div>
       <header className="App-header main">
         <Block />
