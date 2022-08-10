@@ -32,9 +32,14 @@ ons-navigator > div {
   }
   .frame-img {
     position: relative;
-    margin-top: 20px;
-    margin-left: -1.3px;
+    margin-top: 40px;
+    margin-left: 20px;
+    width: 410px;
+    height: 680px;
+    background-color: gray;
+    border-radius: 15px;
   }
+
   /* コンテンツをスマホのフレーム内に収まるように上下中央に表示 */
   .main {
     width: 376px;
@@ -46,5 +51,6 @@ ons-navigator > div {
     bottom: 0;
     margin: auto;
     z-index: 10;
+    border: solid 3px white;
   }
 }
