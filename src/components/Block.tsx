@@ -7,6 +7,7 @@ import { NavigatorInfo } from '../utils/NavigatorInfo';
 
 export interface NavigatorProps {
   navigator?: any;
+  [prop: string]: any;
 }
 
 const renderPage = (route: any, navigator: any) => {

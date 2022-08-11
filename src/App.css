@@ -11,6 +11,23 @@
 /* onsen.cssを読み込むとtoolbarに position:absoruteが設定される対策 */
 .Under-toolbar {
   margin-top: 50px;
+  padding: 5px;
+}
+
+.row-col-m2 > ons-row > ons-col {
+  margin: 2px;
+}
+
+/* 高さを設定して文字を上下左右中央揃え */
+.row-col-m2 > ons-row > ons-col > ons-button {
+  height: 120px;
+  display: table;
+  text-align: center;
+}
+
+.row-col-m2 > ons-row > ons-col > ons-button > div {
+  display: table-cell;
+  vertical-align: middle;
 }
 
 /* PC版対応 */
