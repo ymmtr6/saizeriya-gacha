@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "gh-pages": "^4.0.0",
     "onsenui": "^2.12.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -28,7 +29,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "postinstall": "patch-package"
+    "postinstall": "patch-package",
+    "ghpages": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
