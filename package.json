@@ -30,7 +30,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "postinstall": "patch-package",
-    "ghpages": "gh-pages -d build"
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -65,5 +66,6 @@
     "postinstall-postinstall": "^2.1.0",
     "puppeteer": "^16.1.1",
     "react-test-renderer": "^18.2.0"
-  }
+  },
+  "homepage": "https://ymmtr6.github.io/saizeriya-gacha/"
 }
