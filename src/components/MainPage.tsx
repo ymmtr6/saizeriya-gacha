@@ -7,14 +7,16 @@ import { pushPage } from "../utils/pushPage";
 
 interface MainProps extends NavigatorProps {
   balance?: number;
+  seed?: number;
 }
 
 const MainPage: React.FC<MainProps> = (props) => {
 
   const [balance, setBalance] = useState(props.balance || 1000);
-  const [isLoading, setLoading] = useState(false);
+  const seed = Math.floor(Math.random() * 100000);
 
   const gachaButton = (balance: number) => {
+
     return (
       <Button key={`${balance}-yen-button`} modifier="large"
         onClick={() => pushDetailPage(balance)}>
@@ -24,7 +26,7 @@ const MainPage: React.FC<MainProps> = (props) => {
   }
 
   const pushDetailPage = (selectedBalance: number) => {
-    pushPage({ ...props, balance: selectedBalance }, DetailPage, "DetailPage");
+    pushPage({ ...props, balance: selectedBalance, seed: seed }, DetailPage, "DetailPage");
   }
 
   useEffect(() => {
@@ -37,6 +39,9 @@ const MainPage: React.FC<MainProps> = (props) => {
         <div className="center">サイゼガチャ</div>
       </Toolbar>
       <div className="Under-toolbar">
+        <section >
+          // ここに説明が入る
+        </section>
         <section className="row-col-m2" >
           {/* <Button modifier="large" onClick={() => { ons.notification.alert("alert") }}>
             アラートボタン

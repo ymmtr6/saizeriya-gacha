@@ -14,7 +14,7 @@ const DetailPage: React.FC = (props: any) => {
 
   const renderHeader = () => {
     const sum = hasItemList && itemList.map((i) => i.price).reduce((a, x) => a + x);
-    return <ListHeader>総額{sum ? sum.toLocaleString() : 'xxx'}円(予算{props.balance.toLocaleString()
+    return <ListHeader>{sum ? `総額${sum.toLocaleString()}円` : ''}(予算{props.balance.toLocaleString()
     }円)</ListHeader>
   }
 
@@ -27,18 +27,17 @@ const DetailPage: React.FC = (props: any) => {
     )
   }
 
-  const updateItems = () => {
-    setItemList([]);
+  const updateItems = (seed?: number) => {
     // 通信しているふうに振る舞う
     setTimeout(() => {
-      const items = getItems();
+      const items = getItems(props.balance, seed);
       setItemList(items);
     }, 1000);
   }
 
   // 初回更新
   useEffect(() => {
-    updateItems();
+    updateItems(props.seed);
   }, []);
 
   return (
