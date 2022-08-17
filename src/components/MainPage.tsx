@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Page, Button, Toolbar, Select, Modal, Icon, Row, Col } from "react-onsenui";
+import { Page, Button, Toolbar, List, ListHeader, ListItem, Row, Col, Switch } from "react-onsenui";
 import DetailPage from "./DetailPage";
 import { NavigatorProps } from './Block';
 import ons from "onsenui";
@@ -13,6 +13,10 @@ interface MainProps extends NavigatorProps {
 const MainPage: React.FC<MainProps> = (props) => {
 
   const [balance, setBalance] = useState(props.balance || 1000);
+  const [alcohol, setAlcohol] = useState<boolean>(true);
+  const [counterSales, setCounterSales] = useState<boolean>(false);
+
+
   const seed = Math.floor(Math.random() * 100000);
 
   const gachaButton = (balance: number) => {
@@ -26,7 +30,16 @@ const MainPage: React.FC<MainProps> = (props) => {
   }
 
   const pushDetailPage = (selectedBalance: number) => {
-    pushPage({ ...props, balance: selectedBalance, seed: seed }, DetailPage, "DetailPage");
+    pushPage({
+      ...props,
+      balance: selectedBalance,
+      seed: seed, alcohol: alcohol,
+      counterCales: counterSales
+    }, DetailPage, `detail_${seed}`);
+  }
+
+  const renderRow = () => {
+    return
   }
 
   useEffect(() => {
@@ -34,7 +47,7 @@ const MainPage: React.FC<MainProps> = (props) => {
   });
 
   return (
-    <Page key="page1">
+    <Page key={`main`}>
       <Toolbar>
         <div className="center">サイゼガチャ</div>
       </Toolbar>
@@ -59,7 +72,6 @@ const MainPage: React.FC<MainProps> = (props) => {
             </Col>
             <Col>
               {gachaButton(1000)}
-
             </Col>
           </Row>
           <Row>
@@ -72,6 +84,21 @@ const MainPage: React.FC<MainProps> = (props) => {
 
             </Col>
           </Row>
+          <List>
+            <ListHeader>Settgings</ListHeader>
+            <ListItem>
+              <div className="center">アルコール</div>
+              <div className="right">
+                <Switch checked onChange={(e: any) => { setAlcohol(e.target.value) }}></Switch>
+              </div>
+            </ListItem >
+            <ListItem>
+              <div className="center">店頭販売商品</div>
+              <div className="right">
+                <Switch onChange={(e: any) => { setCounterSales(e.target.value) }}></Switch>
+              </div>
+            </ListItem >
+          </List>
         </section>
       </div >
     </Page >
