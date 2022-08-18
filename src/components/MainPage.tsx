@@ -8,6 +8,8 @@ import { pushPage } from "../utils/pushPage";
 interface MainProps extends NavigatorProps {
   balance?: number;
   seed?: number;
+  alcohol?: boolean;
+  counterSales?: boolean;
 }
 
 const MainPage: React.FC<MainProps> = (props) => {
@@ -33,8 +35,9 @@ const MainPage: React.FC<MainProps> = (props) => {
     pushPage({
       ...props,
       balance: selectedBalance,
-      seed: seed, alcohol: alcohol,
-      counterCales: counterSales
+      seed: seed,
+      alcohol: alcohol,
+      counterSales: counterSales
     }, DetailPage, `detail_${seed}`);
   }
 
@@ -85,17 +88,17 @@ const MainPage: React.FC<MainProps> = (props) => {
             </Col>
           </Row>
           <List>
-            <ListHeader>Settgings</ListHeader>
+            <ListHeader>Option</ListHeader>
             <ListItem>
-              <div className="center">アルコール</div>
+              <div className="center">アルコールを含める</div>
               <div className="right">
-                <Switch checked onChange={(e: any) => { setAlcohol(e.target.value) }}></Switch>
+                <Switch checked onChange={(e: any) => { setAlcohol(e.value); }}></Switch>
               </div>
             </ListItem >
             <ListItem>
-              <div className="center">店頭販売商品</div>
+              <div className="center">店頭販売商品を含める</div>
               <div className="right">
-                <Switch onChange={(e: any) => { setCounterSales(e.target.value) }}></Switch>
+                <Switch onChange={(e: any) => { setCounterSales(e.value); }}></Switch>
               </div>
             </ListItem >
           </List>

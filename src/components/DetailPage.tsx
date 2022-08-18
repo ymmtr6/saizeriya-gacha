@@ -71,7 +71,8 @@ const DetailPage: React.FC = (props: any) => {
   const updateItems = (seed?: number) => {
     // 通信しているふうに振る舞う
     setTimeout(() => {
-      const items = getItems(props.balance, seed);
+      const items = getItems(props.balance, seed,
+        { alcoholic: props.alcohol, counterSales: props.counterSales });
       setItemList(items);
     }, 1000);
   }
