@@ -14,22 +14,41 @@ SA02,小エビのサラダ,350,127,1.4,false,false,false
 SA52,小エビのサラダ Lサイズ,500,191,2.2,false,false
 SA04,ガーデンサラダ,350,173,0.7,false,false,false
 SA54,ガーデンサラダ Lサイズ,500,259,1.1,false,false,false
+TP02,ペコリーノ・ロマーノ,100,,,false,false,false
+TP04,野菜ペースト,100,72,0.3,false,false,false
 TP05,オリーブアンチョビペースト,100,97,0.7,false,false,false
+TP06,やみつきスパイス,50,6,1.4,false,false,false
 SA12,オリーブアンチョビのガーデンサラダ,450,151,0.9,false,false,false
 SA62,オリーブアンチョビのガーデンサラダ Lサイズ,600,178,1.1,false,false,false
 SU01,コーンクリームスープ,150,146,1.1,false,false,false
 SU03,冷たいパンプキンスープ,150,110,0.9,false,false,false
+RP01,ライス,150,303,0.0,false,false,false
+RP02,ラージライス,200,454,0.0,false,false,false
+RP03,スモールライス,100,151,0.0,false,false,false
 RP08,ミニフィセル,150,189,1.0,false,false,false
 RP09,ガーリックトースト,200,245,1.1,false,false,false
 RP06,プチフォッカ,150,214,0.8,false,false,false
 RP05,セットプチフォッカ,100,107,0.4,false,true,false
 RP04,シナモンプチフォッカ,200,246,0.8,false,false,false
 DB01,セットドリンクバー,200,,,false,true,false
+AA01,辛味チキン,300,295,1.8,false,false,false
+AA02,アロスティチーニ,400,224,0.6,false,false,false
+AA52,アロスティチーニ Wサイズ,800,448,1.2,false,false,false
+AA05,エスカルゴのオーブン焼き,400,220,1.3,false,false,false
+AA04,ポップコーンシュリンプ,300,215,1.4,false,false,false
+AA07,チョリソー(辛味ソーセージ),400,425,2.9,false,false,false
+AA09,アスパラガスの温サラダ,300,140,0.8,false,false,false
+AA10,ムール貝のガーリック焼き,400,170,1.4,false,false,false
+AA12,ほうれん草のくたくた,300,156,1.2,false,false,false
 AA13,爽やかにんじんサラダ,200,93,0.9,false,false,false
-AA20,バッファローモッツァレラ,300,209,0.5,false,false,false
-AA70,バッファローモッツァレラ Wサイズ,600,418,1.0,false,false,false
+AA15,カリッとポテト,250,376,2.2,false,false,false
 AA16,プロシュート,400,55,1.4,false,false,false
+AA18,煉獄のたまご,300,319,2.0,false,false,false
+AA20,バッファローモッツァレラ,300,209,0.5,false,false,false
+AA25,柔らか青豆とペコリーノチーズの温サラダ,200,199,1.0,false,false,false
+AA26,イタリア風もつ煮込み,350,202,0.8,false,false,false
 AA66,プロシュート Wサイズ,800,110,2.8,false,false,false
+AA70,バッファローモッツァレラ Wサイズ,600,418,1.0,false,false,false
 WN01,グラスワイン 赤,100,,,true,false,false
 WN02,グラスワイン 白,100,,,true,false,false
 WN03,デカンタ 赤(250ml),200,,,true,false,false
@@ -44,4 +63,77 @@ WN14,ランブルスコセッコ 赤・辛口,1100,,,true,false,false
 WN15,ベルデッキオ 辛口・中,1100,,,true,false,false
 WN16,キャンティ 辛口・やや重い,1100,,,true,false,false
 WN19,キャンティルフィナリゼルバ 辛口・重い,2200,,,true,false,false
+BR01,キリン一番搾り ジョッキ,400,,,true,false,false
+BR02,キリン一番搾り グラスビール,300,,,true,false,false
+BR03,サントリーオールフリー,250,,,true,false,false
+BR04,氷結シチリア産レモン,350,,,true,false,false
 BR05,ラコンブリッコラ(45ml),300,,,true,false,false
+MT01,ハンバーグステーキ,400,582,2.7,false,false,false
+MT02,若鶏のディアボラ風,500,729,2.8,false,false,false
+MT03,イタリアンハンバーグ,500,702,2.9,false,false,false
+MT06,ポップコーンシュリンプとハンバーグの盛合せ,600,750,3.4,false,false,false
+MT07,ディアボラ風ハンバーグ,500,653,3.1,false,false,false
+MT09,リブステーキ,1000,548,1.8,false,false,false
+MT15,チョリソーとハンバーグの盛合せ,550,700,3.6,false,false,false
+MT16,ラムのランプステーキ,1000,337,2.7,false,false,false
+MT18,レフォールソースのハンバーグとサルシッチャの盛り合わせ,600,660,3.1,false,false,false
+DG01,ミラノ風ドリア,300,521,2.5,false,false,false
+DG02,チーズたっぷりミラノ風ドリア,400,722,3.4,false,false,false
+DG03,半熟卵のミラノ風ドリア,350,604,2.7,false,false,false
+DG05,セットプチフォッカ付きミラノ風ドリア,400,628,2.9,false,false,false
+DG07,エビクリームグラタン,400,505,2.0,false,false,false
+PZ01,マルゲリータピザ,400,557,2.4,false,false,false
+PZ51,マルゲリータピザ Wチーズ,500,,,false,false,false
+PZ02,バッファローモッツァレラのピザ,500,566,2.2,false,false,false
+PZ52,バッファローモッツァレラのピザ Wチーズ,600,,,false,false,false
+PZ07,オリーブアンチョビのマルゲリータピザ,500,648,3.3,false,false,false
+PZ57,オリーブアンチョビのマルゲリータピザ Wチーズ,600,,,false,false,false
+PZ08,ソーセージピザ,400,710,4.1,false,false,false
+PZ58,ソーセージピザ Wチーズ,500,,,false,false,false
+PZ06,たっぷりコーンのピザ,400,624,2.4,false,false,false
+PZ56,たっぷりコーンのピザ Wチーズ,500,,,false,false,false
+PA01,タラコソースシシリー風,400,548,1.9,false,false,false
+PA51,タラコソースシシリー風 大盛,600,,,false,false,false
+PA07,スパゲッティポモドーロ,400,684,2.6,false,false,false
+PA57,スパゲッティポモドーロ 大盛,600,,,false,false,false
+PA23,たっぷりペコリーノチーズのポモドーロ,500,762,3.3,false,false,false
+PA73,たっぷりペコリーノチーズのポモドーロ 大盛,700,,,false,false,false
+PA25,ペンネアラビアータ,400,401,3.0,false,false,false
+PA75,ペンネアラビアータ 大盛,600,,,false,false,false
+PA19,スパゲッティアラビアータ,400,611,3.0,false,false,false
+PA69,スパゲッティアラビアータ 大盛,600,,,false,false,false
+PA03,ペペロンチーノ,300,540,1.6,false,false,false
+PA53,ペペロンチーノ 大盛,450,,,false,false,false
+PA17,半熟卵のペペロンチーノ,350,623,1.8,false,false,false
+PA08,アーリオ・オーリオ,300,539,1.6,false,false,false
+PA58,アーリオ・オーリオ 大盛,450,,,false,false,false
+PA05,カルボナーラ,500,746,2.6,false,false,false
+PA55,カルボナーラ 大盛,700,,,false,false,false
+PA18,たっぷりペコリーノチーズのカルボナーラ,600,824,3.3,false,false,false
+PA68,たっぷりペコリーノチーズのカルボナーラ 大盛,800,,,false,false,false
+PA02,ミートソースボロニア風,400,564,2.8,false,false,false
+PA52,ミートソースボロニア風 大盛,600,,,false,false,false
+PA12,半熟卵のミートソースボロニア風,450,647,3.0,false,false,false
+PA11,イカの墨入りスパゲッティ,500,622,2.5,false,false,false
+PA61,イカの墨入りスパゲッティ 大盛,700,,,false,false,false
+PA13,ラムのラグーソース(ペンネ),600,453,1.9,false,false,false
+PA63,ラムのラグーソース(ペンネ) 大盛,800,,,false,false,false
+PA15,ラムのラグーソース(スパゲッティ),600,664,2.0,false,false,false
+PA65,ラムのラグーソース(スパゲッティ) 大盛,800,,,false,false,false
+PA06,エビとブロッコリーのオーロラソース,500,665,2.6,false,false,false
+PA56,エビとブロッコリーのオーロラソース 大盛,700,,,false,false,false
+PA26,野菜と白いんげん豆の煮込み,450,317,2.2,false,false,false
+DE01,ティラミス クラシコ,300,229,0.1,false,false,false
+DE12,プリンとティラミスの盛合せ,500,445,0.2,false,false,false
+DE28,とろっとパンナコッタ,250,128,0.1,false,false,false
+DE17,フレンチトースト,400,299,0.5,false,false,false
+DE05,イタリアンジェラート,250,121,0.1,false,false,false
+DE15,コーヒーゼリー&イタリアンジェラート,350,165,0.1,false,false,false
+DE14,とろけるティラミス&コーヒーゼリー,400,273,0.1,false,false,false
+DE04,ジェラート&シナモンプチフォッカ,450,367,0.9,false,false,false
+DE20,アマレーナ,200,127,0.0,false,false,false
+DE21,プリンとアマレーナの盛合せ,400,343,0.2,false,false,false
+DE13,トリフアイスクリーム,350,164,0.1,false,false,false
+DE11,すっきりレモンのシャーベット,200,127,0.0,false,false,false
+DE06,イタリアンプリン,250,216,0.1,false,false,false
+DE07,チョコレートケーキ,300,166,0.1,false,false,false
