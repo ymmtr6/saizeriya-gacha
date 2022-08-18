@@ -1,59 +1,43 @@
 self.__precacheManifest = [
   {
-    "revision": "9e67f19ad91c336f899f",
+    "revision": "9fdfb7370d3c1bc6f5a8",
     "url": "/saizeriya-gacha/static/css/main.3529471c.chunk.css"
   },
   {
-    "revision": "9e67f19ad91c336f899f",
-    "url": "/saizeriya-gacha/static/js/main.918803aa.chunk.js"
+    "revision": "9fdfb7370d3c1bc6f5a8",
+    "url": "/saizeriya-gacha/static/js/main.025f4de8.chunk.js"
   },
   {
     "revision": "f73afdb56584e3d7fa71",
     "url": "/saizeriya-gacha/static/js/runtime~main.4c86a980.js"
   },
   {
-    "revision": "c1c6f60eb6d50173e124",
+    "revision": "42a2d73614c19e6860e6",
     "url": "/saizeriya-gacha/static/css/2.d2860c62.chunk.css"
   },
   {
-    "revision": "c1c6f60eb6d50173e124",
-    "url": "/saizeriya-gacha/static/js/2.16a8a488.chunk.js"
+    "revision": "42a2d73614c19e6860e6",
+    "url": "/saizeriya-gacha/static/js/2.5c4a4e0d.chunk.js"
   },
   {
     "revision": "9332814257143a307734",
     "url": "/saizeriya-gacha/static/js/3.27b91fb7.chunk.js"
   },
   {
-    "revision": "7f9fdd5e7c0656fea97141765f3e0b50",
-    "url": "/saizeriya-gacha/static/media/ionicons.7f9fdd5e.eot"
-  },
-  {
     "revision": "96f1c901c087fb64019f7665f7f8aca6",
     "url": "/saizeriya-gacha/static/media/ionicons.96f1c901.woff2"
+  },
+  {
+    "revision": "7f9fdd5e7c0656fea97141765f3e0b50",
+    "url": "/saizeriya-gacha/static/media/ionicons.7f9fdd5e.eot"
   },
   {
     "revision": "c37ad37a3a23417b739ac3b297416201",
     "url": "/saizeriya-gacha/static/media/ionicons.c37ad37a.woff"
   },
   {
-    "revision": "a4d31128b633bc0b1cc1f18a34fb3851",
-    "url": "/saizeriya-gacha/static/media/Material-Design-Iconic-Font.a4d31128.woff2"
-  },
-  {
-    "revision": "d2a55d331bdd1a7ea97a8a1fbb3c569c",
-    "url": "/saizeriya-gacha/static/media/Material-Design-Iconic-Font.d2a55d33.woff"
-  },
-  {
-    "revision": "665921072642ed354618b32af7425a22",
-    "url": "/saizeriya-gacha/static/media/ionicons.66592107.svg"
-  },
-  {
     "revision": "cfdc15225683b7529d6ba1e9d8a9be59",
     "url": "/saizeriya-gacha/static/media/ionicons.cfdc1522.ttf"
-  },
-  {
-    "revision": "b351bd62abcd96e924d9f44a3da169a7",
-    "url": "/saizeriya-gacha/static/media/Material-Design-Iconic-Font.b351bd62.ttf"
   },
   {
     "revision": "5e2f92123d241cabecf0b289b9b08d4a",
@@ -64,6 +48,22 @@ self.__precacheManifest = [
     "url": "/saizeriya-gacha/static/media/fa-brands-400.2ef8ba34.woff"
   },
   {
+    "revision": "98b6db59be947f563350d2284fc9ea36",
+    "url": "/saizeriya-gacha/static/media/fa-brands-400.98b6db59.ttf"
+  },
+  {
+    "revision": "a7b95dbdd87e0c809570affaf366a434",
+    "url": "/saizeriya-gacha/static/media/fa-brands-400.a7b95dbd.eot"
+  },
+  {
+    "revision": "665921072642ed354618b32af7425a22",
+    "url": "/saizeriya-gacha/static/media/ionicons.66592107.svg"
+  },
+  {
+    "revision": "dcce4b7fbd5e895561e18af4668265af",
+    "url": "/saizeriya-gacha/static/media/fa-regular-400.dcce4b7f.eot"
+  },
+  {
     "revision": "427d721b86fc9c68b2e85ad42b69238c",
     "url": "/saizeriya-gacha/static/media/fa-regular-400.427d721b.woff"
   },
@@ -72,24 +72,12 @@ self.__precacheManifest = [
     "url": "/saizeriya-gacha/static/media/fa-regular-400.e6257a72.woff2"
   },
   {
-    "revision": "dcce4b7fbd5e895561e18af4668265af",
-    "url": "/saizeriya-gacha/static/media/fa-regular-400.dcce4b7f.eot"
-  },
-  {
     "revision": "65b9977aa23185e8964b36eddbce7a20",
     "url": "/saizeriya-gacha/static/media/fa-regular-400.65b9977a.ttf"
   },
   {
     "revision": "5eb754ab7dbd2fee562360528db4c3c0",
     "url": "/saizeriya-gacha/static/media/fa-regular-400.5eb754ab.svg"
-  },
-  {
-    "revision": "a7b95dbdd87e0c809570affaf366a434",
-    "url": "/saizeriya-gacha/static/media/fa-brands-400.a7b95dbd.eot"
-  },
-  {
-    "revision": "98b6db59be947f563350d2284fc9ea36",
-    "url": "/saizeriya-gacha/static/media/fa-brands-400.98b6db59.ttf"
   },
   {
     "revision": "418dad87601f9c8abd0e5798c0dc1feb",
@@ -108,6 +96,18 @@ self.__precacheManifest = [
     "url": "/saizeriya-gacha/static/media/fa-solid-900.ff8d9f8a.ttf"
   },
   {
+    "revision": "a4d31128b633bc0b1cc1f18a34fb3851",
+    "url": "/saizeriya-gacha/static/media/Material-Design-Iconic-Font.a4d31128.woff2"
+  },
+  {
+    "revision": "d2a55d331bdd1a7ea97a8a1fbb3c569c",
+    "url": "/saizeriya-gacha/static/media/Material-Design-Iconic-Font.d2a55d33.woff"
+  },
+  {
+    "revision": "b351bd62abcd96e924d9f44a3da169a7",
+    "url": "/saizeriya-gacha/static/media/Material-Design-Iconic-Font.b351bd62.ttf"
+  },
+  {
     "revision": "5bf145531213545e03ff41cd27df7d2b",
     "url": "/saizeriya-gacha/static/media/fa-brands-400.5bf14553.svg"
   },
@@ -116,7 +116,7 @@ self.__precacheManifest = [
     "url": "/saizeriya-gacha/static/media/fa-solid-900.49279363.svg"
   },
   {
-    "revision": "a99863ad1f88cba3d44d8fe32c2af45d",
+    "revision": "687f11ae505c9afeadba5f507fe15d69",
     "url": "/saizeriya-gacha/index.html"
   }
 ];
