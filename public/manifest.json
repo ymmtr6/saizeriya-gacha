@@ -1,16 +1,11 @@
 {
-  "short_name": "SaizeriyaGacha",
+  "short_name": "サイゼガチャ",
   "name": "Saizeriya React PWA Gacha",
   "icons": [
     {
       "src": "favicon.ico",
       "sizes": "256x256 128x128 64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
-    },
-    {
-      "src": "logo_transparent.png",
-      "type": "image/png",
-      "sizes": "1200x1200"
     },
     {
       "src": "logo.png",

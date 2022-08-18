@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useMemo } from 'react';
-import { Page, Button, Toolbar, BackButton, ToolbarButton, Icon, List, ListItem, ListHeader } from 'react-onsenui';
+import { Page, Button, Toolbar, BackButton, ToolbarButton, Icon, List, ListItem, ListHeader, SpeedDial, SpeedDialItem, Fab } from 'react-onsenui';
 import { getItems } from '../utils/gacha';
 import ons from 'onsenui';
 import { SaizeriyaItem } from '../utils/SaizeriyaItem';
@@ -112,6 +112,12 @@ const DetailPage: React.FC = (props: any) => {
           />
         </section>
       </div>
+      <SpeedDial disabled={false} direction='up' position='right bottom'>
+        <Fab><Icon icon="md-share"></Icon></Fab>
+        <SpeedDialItem>
+          <Icon icon='md-twitter' />
+        </SpeedDialItem>
+      </SpeedDial>
       {/* itemListがない時はLoadingModalを表示する */}
       {!hasItemList && <LoadingModal open />}
     </Page>

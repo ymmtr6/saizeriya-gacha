@@ -71,7 +71,7 @@ const MainPage: React.FC<MainProps> = (props) => {
 
           <Row>
             <Col>
-              {gachaButton(500)}
+              {gachaButton(800)}
             </Col>
             <Col>
               {gachaButton(1000)}
@@ -84,7 +84,6 @@ const MainPage: React.FC<MainProps> = (props) => {
             </Col>
             <Col>
               {gachaButton(2000)}
-
             </Col>
           </Row>
           <List>
