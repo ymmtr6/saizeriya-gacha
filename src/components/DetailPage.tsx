@@ -30,8 +30,8 @@ const DetailPage: React.FC = (props: any) => {
 
     return Object.entries(obj).map((item) =>
       <Row key={`toast_${item[0]}`}>
-        <Col width="15%">{item[0]}</Col>
-        <Col width="10%">{item[1]}</Col>
+        <Col width="20%">{item[0]}</Col>
+        <Col>{item[1]}</Col>
       </Row>
     )
   }

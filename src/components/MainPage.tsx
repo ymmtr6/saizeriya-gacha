@@ -52,12 +52,15 @@ const MainPage: React.FC<MainProps> = (props) => {
   return (
     <Page key={`main`}>
       <Toolbar>
-        <div className="center">サイゼガチャ</div>
+        <div className="center">Saizeriya PWA Gacha</div>
       </Toolbar>
       <div className="Under-toolbar">
         <section >
           <Card>
-            <img style={{ width: "100%" }} src={gachaImg} />
+            <div className="title">サイゼリヤガチャ</div>
+            <div className="content">
+              <div>バージョン 0.0.1</div>
+            </div>
           </Card>
         </section>
         <section className="row-col-m2" >

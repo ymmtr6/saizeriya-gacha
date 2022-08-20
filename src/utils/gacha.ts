@@ -58,6 +58,8 @@ export const simple: Strategy = {
         target.splice(randomizer.nextInt(0, target.length - 1), 1)[0]
       );
     }
-    return result;
+    return result.sort((a, b) =>
+      a.orderId < b.orderId ? -1 : a.orderId === b.orderId ? 0 : 1
+    );
   },
 };
