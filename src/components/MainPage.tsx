@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Page, Button, Toolbar, List, ListHeader, ListItem, Row, Col, Switch } from "react-onsenui";
+import { Page, Button, Toolbar, List, ListHeader, ListItem, Row, Col, Switch, Card } from "react-onsenui";
 import DetailPage from "./DetailPage";
 import { NavigatorProps } from './Block';
 import ons from "onsenui";
 import { pushPage } from "../utils/pushPage";
+import gachaImg from "../img/gachagacha.png";
 
 interface MainProps extends NavigatorProps {
   balance?: number;
@@ -44,10 +45,6 @@ const MainPage: React.FC<MainProps> = (props) => {
     }, DetailPage, `detail_${seed}`);
   }
 
-  const renderRow = () => {
-    return
-  }
-
   useEffect(() => {
 
   });
@@ -59,7 +56,9 @@ const MainPage: React.FC<MainProps> = (props) => {
       </Toolbar>
       <div className="Under-toolbar">
         <section >
-          // ここに説明が入る
+          <Card>
+            <img style={{ width: "100%" }} src={gachaImg} />
+          </Card>
         </section>
         <section className="row-col-m2" >
           {/* <Button modifier="large" onClick={() => { ons.notification.alert("alert") }}>

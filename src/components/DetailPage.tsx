@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useMemo } from 'react';
-import { Page, Button, Toolbar, BackButton, ToolbarButton, Icon, List, ListItem, ListHeader, SpeedDial, SpeedDialItem, Fab } from 'react-onsenui';
+import { Page, Row, Col, Toolbar, BackButton, ToolbarButton, Icon, List, ListItem, ListHeader, SpeedDial, SpeedDialItem, Fab, Toast } from 'react-onsenui';
 import { getItems } from '../utils/gacha';
 import ons from 'onsenui';
 import { SaizeriyaItem } from '../utils/SaizeriyaItem';
@@ -9,6 +9,7 @@ import { pushPage } from '../utils/pushPage';
 const DetailPage: React.FC = (props: any) => {
 
   const [itemList, setItemList] = useState<SaizeriyaItem[]>([]);
+  const [openToast, setOpenToast] = useState<boolean>(false);
 
   const hasItemList = useMemo<boolean>(() => itemList && itemList.length !== 0, [itemList]);
 
@@ -18,6 +19,21 @@ const DetailPage: React.FC = (props: any) => {
     const sum = hasItemList && itemList.map((i) => i.price).reduce((a, x) => a + x);
     return <ListHeader>{sum ? `総額${sum.toLocaleString()}円` : ''}(予算{props.balance.toLocaleString()
     }円)</ListHeader>
+  }
+
+  const countItemList = () => {
+    const obj: { [key: string]: number } = {};
+    itemList.map((item) => item.orderId)
+      .forEach((id) => {
+        obj[id] = ++obj[id] || 1;
+      })
+
+    return Object.entries(obj).map((item) =>
+      <Row key={`toast_${item[0]}`}>
+        <Col width="15%">{item[0]}</Col>
+        <Col width="10%">{item[1]}</Col>
+      </Row>
+    )
   }
 
   const selectIcon = (orderId: string) => {
@@ -74,15 +90,20 @@ const DetailPage: React.FC = (props: any) => {
         </div>
         <div className='center'>ガチャ結果</div>
         <div className='right'>
+          <ToolbarButton onClick={() => { setOpenToast(!openToast); }}>
+            注文
+          </ToolbarButton>
           <ToolbarButton onClick={
             () => {
               const newSeed = Math.floor(Math.random() * 100000);
+              setOpenToast(false);
               pushPage({ ...props, balance: props.balance, seed: newSeed }, DetailPage, `detail_${newSeed}`);
             }
           }>
             <Icon
               icon="fa-refresh" />
           </ToolbarButton>
+          <div>注文</div>
         </div>
 
       </Toolbar>
@@ -101,9 +122,18 @@ const DetailPage: React.FC = (props: any) => {
           <Icon icon='md-twitter' />
         </SpeedDialItem>
       </SpeedDial>
+
+      {/* orderIdと個数を表示する注文toast */}
+      {<Toast visible={openToast} className="main">
+        <div>
+          {countItemList()}
+        </div>
+        <button onClick={() => setOpenToast(false)}>Close</button>
+      </Toast>}
+
       {/* itemListがない時はLoadingModalを表示する */}
       {!hasItemList && <LoadingModal open />}
-    </Page>
+    </Page >
   );
 };
 

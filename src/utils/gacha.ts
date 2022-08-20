@@ -42,7 +42,6 @@ export const simple: Strategy = {
     let result: SaizeriyaItem[] = option.drinkBar
       ? items.filter((item) => item.orderId === "DB01")
       : [];
-    console.log(result);
     let target = [...items]
       .filter((item) => (option.alcoholic ? true : !item.alcoholic))
       .filter((item) => (option.counterSales ? true : !item.counterSales))
