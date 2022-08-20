@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/saizeriya-gacha/precache-manifest.f7279b1bb0def66312aad2e66b187293.js"
+  "/saizeriya-gacha/precache-manifest.0b55135a93d2b1446c516ad5d35362db.js"
 );
 
 workbox.clientsClaim();
