@@ -5,6 +5,7 @@ import { SaizeriyaItem } from "./SaizeriyaItem";
 interface GachaOptions {
   alcoholic?: boolean;
   counterSales?: boolean;
+  drinkBar?: boolean;
 }
 
 export const getItems = (
@@ -38,10 +39,14 @@ export const simple: Strategy = {
     option: GachaOptions
   ) => {
     let sum: number, min: number;
-    let result: SaizeriyaItem[] = [];
+    let result: SaizeriyaItem[] = option.drinkBar
+      ? items.filter((item) => item.orderId === "DB01")
+      : [];
+    console.log(result);
     let target = [...items]
       .filter((item) => (option.alcoholic ? true : !item.alcoholic))
       .filter((item) => (option.counterSales ? true : !item.counterSales))
+      .filter((item) => (option.drinkBar ? item.orderId !== "DB01" : true))
       .filter((item) => !item.setOnly);
 
     while (true) {

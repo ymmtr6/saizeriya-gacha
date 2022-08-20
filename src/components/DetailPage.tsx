@@ -20,43 +20,26 @@ const DetailPage: React.FC = (props: any) => {
     }円)</ListHeader>
   }
 
-  const selectIcon = (orderId: string, key: string) => {
-    let icon = <Icon key={key} icon='fa-bag-shopping'></Icon>;
+  const selectIcon = (orderId: string) => {
     const itemType = orderId.slice(0, 2);
-    console.log(itemType);
     switch (itemType) {
       case 'WN':
-        icon = <Icon key={key} icon='fa-wine-glass'></Icon>;
-        break;
       case 'BR':
-        icon = <Icon key={key} icon='fa-wine-glass'></Icon>;
-        break;
-      case 'SA':
-        icon = <Icon key={key} icon='fa-plate-wheat'></Icon>
-        break;
-      case 'SU':
-        icon = <Icon key={key} icon='fa-mag-hot'></Icon>
-        break;
-      case 'RP':
-        icon = <Icon key={key} icon='fa-bread-slice'></Icon>
-        break;
+        return 'md-wine-bar';
       case 'DB':
-        icon = <Icon key={key} icon='fa-glass'></Icon>
-        break;
-      case 'AA':
-        icon = <Icon key={key} icon='fa-bowl-food'></Icon>
-        break;
+        return 'md-local-drink';
       case 'PZ':
-        icon = <Icon key={key} icon='fa-pizza-slice'></Icon>
+        return 'md-local-pizza';
+
     }
-    return icon;
+    return 'md-local-dining'
   }
 
   const renderRow = (item: SaizeriyaItem, idx: number) => {
     return (
       <ListItem key={`${pageKey}_item_${idx}`} modifier={idx === itemList.length - 1 ? 'longdivider' : null}>
         {/* <div className="left">
-          {selectIcon(item.orderId, `item_${idx}_icon`)}
+          <Icon key={`item_${idx}_icon`} icon={selectIcon(item.orderId)} />
         </div> */}
         <div className='center'>
           {`${item.name}`}
@@ -72,7 +55,7 @@ const DetailPage: React.FC = (props: any) => {
     // 通信しているふうに振る舞う
     setTimeout(() => {
       const items = getItems(props.balance, seed,
-        { alcoholic: props.alcohol, counterSales: props.counterSales });
+        { alcoholic: props.alcohol, counterSales: props.counterSales, drinkBar: props.drinkBar });
       setItemList(items);
     }, 1000);
   }

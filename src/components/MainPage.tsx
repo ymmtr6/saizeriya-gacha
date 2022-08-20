@@ -10,13 +10,15 @@ interface MainProps extends NavigatorProps {
   seed?: number;
   alcohol?: boolean;
   counterSales?: boolean;
+  drinkBar?: boolean;
 }
 
 const MainPage: React.FC<MainProps> = (props) => {
 
   const [balance, setBalance] = useState(props.balance || 1000);
-  const [alcohol, setAlcohol] = useState<boolean>(true);
+  const [alcohol, setAlcohol] = useState<boolean>(false);
   const [counterSales, setCounterSales] = useState<boolean>(false);
+  const [drinkBar, setDrinkBar] = useState<boolean>(false);
 
 
   const seed = Math.floor(Math.random() * 100000);
@@ -37,7 +39,8 @@ const MainPage: React.FC<MainProps> = (props) => {
       balance: selectedBalance,
       seed: seed,
       alcohol: alcohol,
-      counterSales: counterSales
+      counterSales: counterSales,
+      drinkBar: drinkBar
     }, DetailPage, `detail_${seed}`);
   }
 
@@ -89,17 +92,24 @@ const MainPage: React.FC<MainProps> = (props) => {
           <List>
             <ListHeader>Option</ListHeader>
             <ListItem>
+              <div className="center">ドリンクバーをつける</div>
+              <div className="right">
+                <Switch onChange={(e: any) => { setDrinkBar(e.value) }}></Switch>
+              </div>
+            </ListItem>
+            <ListItem>
               <div className="center">アルコールを含める</div>
               <div className="right">
-                <Switch checked onChange={(e: any) => { setAlcohol(e.value); }}></Switch>
+                <Switch onChange={(e: any) => { setAlcohol(e.value); }}></Switch>
               </div>
-            </ListItem >
+            </ListItem>
             <ListItem>
               <div className="center">店頭販売商品を含める</div>
               <div className="right">
                 <Switch onChange={(e: any) => { setCounterSales(e.value); }}></Switch>
               </div>
-            </ListItem >
+            </ListItem>
+
           </List>
         </section>
       </div >
