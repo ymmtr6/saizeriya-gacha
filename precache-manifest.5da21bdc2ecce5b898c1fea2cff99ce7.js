@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "27601155d7f2ae3e048f",
+    "revision": "a4b6810f9af3b1452e79",
     "url": "/saizeriya-gacha/static/css/main.3529471c.chunk.css"
   },
   {
-    "revision": "27601155d7f2ae3e048f",
-    "url": "/saizeriya-gacha/static/js/main.a8966f92.chunk.js"
+    "revision": "a4b6810f9af3b1452e79",
+    "url": "/saizeriya-gacha/static/js/main.c9743262.chunk.js"
   },
   {
     "revision": "f73afdb56584e3d7fa71",
@@ -24,6 +24,10 @@ self.__precacheManifest = [
     "url": "/saizeriya-gacha/static/js/3.27b91fb7.chunk.js"
   },
   {
+    "revision": "96f1c901c087fb64019f7665f7f8aca6",
+    "url": "/saizeriya-gacha/static/media/ionicons.96f1c901.woff2"
+  },
+  {
     "revision": "7f9fdd5e7c0656fea97141765f3e0b50",
     "url": "/saizeriya-gacha/static/media/ionicons.7f9fdd5e.eot"
   },
@@ -32,20 +36,16 @@ self.__precacheManifest = [
     "url": "/saizeriya-gacha/static/media/ionicons.c37ad37a.woff"
   },
   {
-    "revision": "cfdc15225683b7529d6ba1e9d8a9be59",
-    "url": "/saizeriya-gacha/static/media/ionicons.cfdc1522.ttf"
-  },
-  {
-    "revision": "96f1c901c087fb64019f7665f7f8aca6",
-    "url": "/saizeriya-gacha/static/media/ionicons.96f1c901.woff2"
-  },
-  {
     "revision": "a4d31128b633bc0b1cc1f18a34fb3851",
     "url": "/saizeriya-gacha/static/media/Material-Design-Iconic-Font.a4d31128.woff2"
   },
   {
     "revision": "d2a55d331bdd1a7ea97a8a1fbb3c569c",
     "url": "/saizeriya-gacha/static/media/Material-Design-Iconic-Font.d2a55d33.woff"
+  },
+  {
+    "revision": "cfdc15225683b7529d6ba1e9d8a9be59",
+    "url": "/saizeriya-gacha/static/media/ionicons.cfdc1522.ttf"
   },
   {
     "revision": "665921072642ed354618b32af7425a22",
@@ -88,24 +88,24 @@ self.__precacheManifest = [
     "url": "/saizeriya-gacha/static/media/fa-regular-400.65b9977a.ttf"
   },
   {
-    "revision": "5eb754ab7dbd2fee562360528db4c3c0",
-    "url": "/saizeriya-gacha/static/media/fa-regular-400.5eb754ab.svg"
-  },
-  {
     "revision": "46e7cec623d8bd790d9fdbc8de2d3ee7",
     "url": "/saizeriya-gacha/static/media/fa-solid-900.46e7cec6.eot"
+  },
+  {
+    "revision": "5eb754ab7dbd2fee562360528db4c3c0",
+    "url": "/saizeriya-gacha/static/media/fa-regular-400.5eb754ab.svg"
   },
   {
     "revision": "418dad87601f9c8abd0e5798c0dc1feb",
     "url": "/saizeriya-gacha/static/media/fa-solid-900.418dad87.woff2"
   },
   {
-    "revision": "a7140145ebaaf5fb14e40430af5d25c4",
-    "url": "/saizeriya-gacha/static/media/fa-solid-900.a7140145.woff"
-  },
-  {
     "revision": "ff8d9f8adb0d09f11d4816a152672f53",
     "url": "/saizeriya-gacha/static/media/fa-solid-900.ff8d9f8a.ttf"
+  },
+  {
+    "revision": "a7140145ebaaf5fb14e40430af5d25c4",
+    "url": "/saizeriya-gacha/static/media/fa-solid-900.a7140145.woff"
   },
   {
     "revision": "5bf145531213545e03ff41cd27df7d2b",
@@ -116,7 +116,7 @@ self.__precacheManifest = [
     "url": "/saizeriya-gacha/static/media/fa-solid-900.49279363.svg"
   },
   {
-    "revision": "fcb2293f7ad17c5238fb55a5600104ee",
+    "revision": "ff33bfffd2fd4ae20277d20a32b5a564",
     "url": "/saizeriya-gacha/index.html"
   }
 ];
