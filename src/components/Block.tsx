@@ -28,6 +28,14 @@ const Block: React.FC = (props) => {
         props: { ...props }
       } as NavigatorInfo
     }
+    onPostPop={
+      (customEvent: any) => {
+        if (customEvent.routes.routes.length == 1) {
+          const searchParams = new URLSearchParams(window.location.search);
+          history.replaceState('', '', '/');
+        }
+      }
+    }
     animationOptions={{
       delay: 0.1,
       duration: 0.4

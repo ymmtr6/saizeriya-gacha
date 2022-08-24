@@ -4,7 +4,7 @@ import DetailPage from "./DetailPage";
 import { NavigatorProps } from './Block';
 import ons from "onsenui";
 import { pushPage } from "../utils/pushPage";
-import gachaImg from "../img/gachagacha.png";
+import { setTimeout } from "timers";
 
 interface MainProps extends NavigatorProps {
   balance?: number;
@@ -21,20 +21,19 @@ const MainPage: React.FC<MainProps> = (props) => {
   const [counterSales, setCounterSales] = useState<boolean>(false);
   const [drinkBar, setDrinkBar] = useState<boolean>(false);
 
-
-  const seed = Math.floor(Math.random() * 100000);
+  const searchParams = new URLSearchParams(window.location.search);
 
   const gachaButton = (balance: number) => {
-
+    const seed = Math.floor(Math.random() * 100000);
     return (
       <Button key={`${balance}-yen-button`} modifier="large"
-        onClick={() => pushDetailPage(balance)}>
+        onClick={() => pushDetailPage(balance, seed)}>
         <div>{`${balance}円ガチャ`}</div>
       </Button>
     )
   }
 
-  const pushDetailPage = (selectedBalance: number) => {
+  const pushDetailPage = (selectedBalance: number, seed?: number) => {
     pushPage({
       ...props,
       balance: selectedBalance,
@@ -46,8 +45,15 @@ const MainPage: React.FC<MainProps> = (props) => {
   }
 
   useEffect(() => {
-
-  });
+    // seed&balanceがある場合はpush
+    const seed = searchParams.get("seed");
+    const balance = searchParams.get("balance");
+    if (seed && balance) {
+      setTimeout(() => {
+        pushDetailPage(Number(balance));
+      }, 500);
+    }
+  }, []);
 
   return (
     <Page key={`main`}>
@@ -59,7 +65,7 @@ const MainPage: React.FC<MainProps> = (props) => {
           <Card>
             <div className="title">サイゼリヤガチャ</div>
             <div className="content">
-              <div>バージョン 0.0.1</div>
+              <div>version 0.0.1</div>
             </div>
           </Card>
         </section>

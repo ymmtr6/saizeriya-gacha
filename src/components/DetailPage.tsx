@@ -13,6 +13,8 @@ const DetailPage: React.FC = (props: any) => {
 
   const hasItemList = useMemo<boolean>(() => itemList && itemList.length !== 0, [itemList]);
 
+  const searchParams = new URLSearchParams(window.location.search);
+
   const pageKey = `detail_${props.seed}`;
 
   const renderHeader = () => {
@@ -81,12 +83,22 @@ const DetailPage: React.FC = (props: any) => {
     updateItems(props.seed);
   }, []);
 
+  // URL更新
+  useEffect(() => {
+    if (props.seed && props.balance) {
+      searchParams.set('seed', props.seed);
+      searchParams.set('balance', props.balance);
+      history.replaceState('', '', `?${searchParams.toString()}`);
+    }
+  });
 
   return (
     <Page key={pageKey}>
       <Toolbar>
         <div className='left'>
-          <BackButton>Back</BackButton>
+          <BackButton>
+            Back
+          </BackButton>
         </div>
         <div className='center'>ガチャ結果</div>
         <div className='right'>
@@ -123,6 +135,9 @@ const DetailPage: React.FC = (props: any) => {
         </SpeedDialItem>
       </SpeedDial>
 
+      {/* itemListがない時はLoadingModalを表示する */}
+      {!hasItemList && <LoadingModal open />}
+
       {/* orderIdと個数を表示する注文toast */}
       {<Toast visible={openToast} className="main">
         <div>
@@ -130,9 +145,6 @@ const DetailPage: React.FC = (props: any) => {
         </div>
         <button onClick={() => setOpenToast(false)}>Close</button>
       </Toast>}
-
-      {/* itemListがない時はLoadingModalを表示する */}
-      {!hasItemList && <LoadingModal open />}
     </Page >
   );
 };
