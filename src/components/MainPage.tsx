@@ -61,7 +61,7 @@ const MainPage: React.FC<MainProps> = (props) => {
         <div className="center">Saizeriya PWA Gacha</div>
       </Toolbar>
       <div className="Under-toolbar">
-        <section >
+        <section>
           <Card>
             <div className="title">サイゼリヤガチャ</div>
             <div className="content">
@@ -119,6 +119,12 @@ const MainPage: React.FC<MainProps> = (props) => {
             </ListItem>
 
           </List>
+        </section>
+        <section style={{
+          textAlign: 'center', paddingTop: '5px',
+          fontSize: '0.8em'
+        }}>
+          <div>©2022 Riku Yamamoto</div>
         </section>
       </div >
     </Page >
