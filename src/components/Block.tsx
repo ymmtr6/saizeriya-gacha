@@ -31,8 +31,8 @@ const Block: React.FC = (props) => {
     onPostPop={
       (customEvent: any) => {
         if (customEvent.routes.routes.length == 1) {
-          const searchParams = new URLSearchParams(window.location.search);
-          history.replaceState('', '', '/');
+          const url = document.location.href.split('?')[0];
+          history.replaceState('', document.title, url);
         }
       }
     }

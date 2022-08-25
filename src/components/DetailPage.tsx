@@ -26,29 +26,30 @@ const DetailPage: React.FC = (props: any) => {
     if (props.seed && props.balance) {
       searchParams.set('seed', props.seed);
       searchParams.set('balance', props.balance);
-      history.replaceState('', '', `?${searchParams.toString()}`);
+      const url = (`${document.location.href.split('?')[0]}?${searchParams.toString()}`);
+      history.replaceState('', document.title, url);
     }
   });
 
   // ヘッダー表示
   const renderHeader = () => {
     const sum = hasItemList && itemList.map((i) => i.price).reduce((a, x) => a + x);
-    return <ListHeader>{sum ? `総額${sum.toLocaleString()}円` : ''}(予算{props.balance.toLocaleString()
+    return <ListHeader>{sum ? `総額${sum.toLocaleString()} 円` : ''}(予算{props.balance.toLocaleString()
     }円)</ListHeader>
   }
 
   // Item表示
   const renderRow = (item: SaizeriyaItem, idx: number) => {
     return (
-      <ListItem key={`${pageKey}_item_${idx}`} modifier={idx === itemList.length - 1 ? 'longdivider' : null}>
+      <ListItem key={`${pageKey}_item_${idx} `} modifier={idx === itemList.length - 1 ? 'longdivider' : null}>
         {/* <div className="left">
-          <Icon key={`item_${idx}_icon`} icon={selectIcon(item.orderId)} />
+          <Icon key={`item_${ idx } _icon`} icon={selectIcon(item.orderId)} />
         </div> */}
         <div className='center'>
-          {`${item.name}`}
+          {`${item.name} `}
         </div>
         <div className='right'>
-          {`${item.price.toLocaleString()}円`}
+          {`${item.price.toLocaleString()} 円`}
         </div>
       </ListItem >
     )
@@ -72,7 +73,7 @@ const DetailPage: React.FC = (props: any) => {
         obj[id] = ++obj[id] || 1;
       })
     return Object.entries(obj).map((item) =>
-      <Row key={`toast_${item[0]}`}>
+      <Row key={`toast_${item[0]} `}>
         <Col width="20%">{item[0]}</Col>
         <Col>{item[1]}</Col>
       </Row>
@@ -97,7 +98,7 @@ const DetailPage: React.FC = (props: any) => {
   const getTweetLink = () => {
     const items = itemList.map((item) => item.name).join("\n");
     const sum = itemList.length ? itemList.map((item) => item.price).reduce((a, x) => a + x) : 0;
-    const text = encodeURIComponent(`サイゼリヤガチャ\n\n${items}\n\n合計${sum}円(予算${props.balance}円)`);
+    const text = encodeURIComponent(`サイゼリヤガチャ\n\n${items} \n\n合計${sum} 円(予算${props.balance}円)`);
     const param = encodeURIComponent(searchParams.toString());
     return `https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fpublish.twitter.com%2F&ref_src=twsrc%5Etfw%7Ctwcamp%5Ebuttonembed%7Ctwterm%5Eshare%7Ctwgr%5E&text=${text}&url=https%3A%2F%2Fymmtr6.github.io%2Fsaizeriya-gacha%2F${param}`;
   }
@@ -110,7 +111,7 @@ const DetailPage: React.FC = (props: any) => {
             Back
           </BackButton>
         </div>
-        <div className='center'>ガチャ結果</div>
+        <div className='center'>Result</div>
         <div className='right'>
           <ToolbarButton onClick={() => { setOpenToast(!openToast); }}>
             注文
